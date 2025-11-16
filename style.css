@@ -1,0 +1,585 @@
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+direction: rtl;
+padding-top: 0; 
+}
+
+/* ============================ */
+/* ===== עיצוב Header חדש ===== */
+/* ============================ */
+
+.hasd-text {
+font-size: 14px;
+font-weight: bold;
+font-family: 'Arial', sans-serif;
+color: white;
+user-select: none;
+line-height: 1; 
+}
+
+header {
+display: grid;
+grid-template-columns: 1fr auto 1fr;
+align-items: center;
+padding: 10px 20px;
+background: #222;
+color: white;
+height: 90px; 
+box-sizing: border-box;
+}
+
+/* --- 1. צד ימין: תפריט --- */
+.header-right {
+justify-self: start; 
+position: relative; 
+display: flex; 
+flex-direction: column; 
+align-items: flex-start; 
+gap: 2px; 
+}
+
+/* --- 2. מרכז: לוגו --- */
+.logo-hg {
+justify-self: center; 
+padding: 0; 
+}
+.logo-hg img {
+height: 70px; 
+width: auto;
+border-radius: 50%;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+background: #fff;
+display: block;
+}
+
+/* --- 3. צד שמאל: טלפון --- */
+.header-phone {
+justify-self: end; 
+}
+.header-phone a {
+color: white;
+text-decoration: none;
+font-size: 20px; 
+font-weight: bold;
+ display: flex;
+ align-items: center;
+ gap: 8px; /* רווח בין האייקון למספר */
+ direction: ltr; 
+}
+.header-phone a:hover {
+color: #f0d07a;
+}
+
+.phone-icon {
+ width: 20px; 
+ height: 20px;
+ fill: currentColor; 
+}
+
+
+/* כפתור המבורגר */
+.hamburger-menu {
+width: 30px;
+height: 22px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+cursor: pointer;
+}
+.hamburger-menu span {
+display: block;
+height: 4px;
+width: 100%;
+background: white;
+border-radius: 2px;
+}
+
+/* תפריט הניווט (מוסתר כברירת מחדל) */
+.navbar {
+display: none; 
+position: absolute;
+top: 100%; 
+right: 0; 
+background: #333;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+min-width: 200px;
+margin-top: 10px;
+overflow: hidden;
+z-index: 999; 
+}
+.navbar.open {
+display: block;
+}
+
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: block; 
+}
+.navbar li {
+display: block; 
+border-right: none; 
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.navbar li:first-child {
+border-right: none;
+}
+.navbar li:last-child {
+border-bottom: none;
+}
+.navbar a {
+text-decoration: none;
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+transition: color 0.3s ease, background-color 0.3s ease;
+display: block; 
+padding: 12px 20px;
+}
+.navbar a:hover, 
+.navbar a:focus {
+color: #222;
+background-color: #f0d07a;
+}
+
+/* ============================ */
+/* ===== סוף עיצוב Header ===== */
+/* ============================ */
+
+
+/* Hero Section */
+.hero {
+position: relative;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: right;
+color: white;
+direction: rtl;
+ overflow: hidden; 
+}
+
+.hero .overlay {
+position: absolute;
+top: 0; right: 0; bottom: 0; left: 0;
+background: rgba(0,0,0,0.55);
+ z-index: 1; 
+}
+
+.hero-content {
+position: relative;
+max-width: 800px;
+padding: 20px;
+z-index: 2; 
+ text-align: center; /* ==== הוספה: ממכז את כל התוכן (כולל הכפתור) ==== */
+}
+
+.hero h3 {
+font-size: 22px;
+margin-bottom: 15px;
+}
+.hero h1 {
+font-size: 34px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+.hero h1 span {
+color: #d4a373;
+}
+.hero .small {
+font-size: 16px;
+margin-bottom: 20px;
+color: #f2c48d;
+}
+.center-offer {
+text-align: center;
+margin: 50px auto;
+}
+.center-offer h3 {
+font-size: 22px;
+margin-bottom: 18px;
+color: white;
+font-weight: bold;
+}
+.center-offer h1 {
+font-size: 34px;
+font-weight: bold;
+color: #d4a373;
+}
+.lead-form {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 20px;
+}
+.lead-form input {
+flex: 1 1 calc(33% - 10px);
+padding: 12px;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+}
+form input, 
+form textarea {
+direction: rtl; 
+text-align: right; 
+}
+.lead-form button {
+flex: 1 1 100%;
+padding: 14px;
+background: #d4a373;
+color: white;
+font-size: 18px;
+font-weight: bold;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: 0.3s;
+ font-family: inherit; 
+}
+.cta-link {
+display: inline-block;
+margin-top: 15px;
+background: black;
+color: white;
+padding: 10px 18px;
+border-radius: 6px;
+text-decoration: none;
+font-size: 16px;
+font-weight: bold;
+ font-family: inherit; 
+}
+.cta-link:hover {
+background: #333;
+}
+.btn {
+display: inline-block;
+padding: 12px 20px;
+background: black;
+color: white;
+border-radius: 5px;
+text-decoration: none;
+margin-top: 20px;
+}
+.services {
+padding: 50px 20px;
+background: #f9f9f9;
+}
+
+.services h2 {
+ text-align: center;
+ margin-bottom: 30px;
+}
+
+.service-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+}
+.service-card {
+background: white;
+padding: 20px;
+border: 1px solid #ddd;
+text-align: center;
+border-radius: 8px;
+}
+.service-card img {
+width: 100%;
+height: 150px;
+object-fit: cover;
+border-radius: 8px;
+margin-bottom: 10px;
+}
+.benefits-bg {
+position: relative;
+background: none;
+padding: 60px 20px;
+overflow: hidden;
+}
+.benefits-bg::before {
+content: "";
+position: absolute;
+top: 0; right: 0; bottom: 0; left: 0;
+background-image: url('per_2.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+filter: blur(10px);
+opacity: 0.7; 
+z-index: 1;
+}
+.benefits-bg > * {
+position: relative;
+z-index: 2;
+}
+.gallery {
+padding: 50px 20px;
+background: #fafafa;
+}
+.gallery h2 {
+text-align: center;
+margin-bottom: 30px;
+}
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 20px;
+}
+.gallery-item img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+.gallery-item img:hover {
+transform: scale(1.05);
+}
+.benefits {
+text-align: center;
+padding: 60px 20px;
+}
+.benefits h2 {
+font-size: 28px;
+margin-bottom: 40px;
+font-weight: bold;
+color: white;
+border-bottom: 2px solid #d4a373;
+display: inline-block;
+padding-bottom: 8px;
+}
+.cards {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+.card {
+background: #fff;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+padding: 25px;
+max-width: 320px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: center;
+}
+.card:hover {
+transform: translateY(-8px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.card .icon {
+font-size: 40px;
+color: #d4a373;
+margin-bottom: 15px;
+}
+.card h3 {
+font-size: 20px;
+margin-bottom: 10px;
+color: #333;
+}
+.card hr {
+width: 60%;
+margin: 10px auto 20px;
+border: none;
+border-top: 1px solid #d4a373;
+}
+.card p {
+color: #555;
+font-size: 15px;
+line-height: 1.6;
+}
+.card .highlight {
+margin-top: 15px;
+font-weight: bold;
+color: #b35a00;
+}
+.contact {
+padding: 50px 20px;
+background: #f1f1f1;
+}
+.contact h2 {
+text-align: center;
+}
+form {
+max-width: 400px;
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+input, textarea {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+ font-family: inherit; 
+ font-size: 16px; 
+}
+footer {
+text-align: center;
+padding: 20px;
+background: #222;
+color: white;
+}
+.whatsapp-float {
+position: fixed;
+bottom: 20px;
+left: 20px;
+z-index: 1500;
+width: 62px;
+height: 62px;
+border-radius: 50%;
+background: none;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+cursor: pointer;
+transition: box-shadow 0.3s;
+text-decoration: none;
+}
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+box-shadow: 0 4px 16px rgba(37,211,102,0.25);
+}
+.wa-img {
+width: 56px;
+height: 56px;
+border-radius: 50%;
+object-fit: cover;
+display: block;
+}
+
+/* ============================ */
+/* ===== עיצוב רספונסיבי ===== */
+/* ============================ */
+
+@media (max-width: 768px) {
+.service-grid,
+.gallery-grid,
+.cards {
+ grid-template-columns: 1fr !important;
+ flex-direction: column !important;
+ gap: 18px;
+}
+.whatsapp-float {
+ width: 54px;
+ height: 54px;
+ left: 10px;
+ bottom: 10px;
+}
+
+body {
+ padding-top: 0;
+}
+
+header {
+ height: 80px; 
+ padding: 10px 15px;
+}
+
+.header-phone {
+ display: none;
+}
+
+header {
+ grid-template-columns: 1fr 1fr;
+}
+.header-right {
+ justify-self: start; 
+}
+.logo-hg {
+ justify-self: end; 
+}
+
+.logo-hg img {
+ height: 60px;
+}
+
+.hamburger-menu {
+ padding: 5px;
+}
+}
+
+@media (max-width: 360px) {
+.logo-hg img {
+ height: 55px;
+}
+}
+
+/* ============================ */
+/* ===== עיצוב גלריית Hero ===== */
+/* ============================ */
+
+.hero-slideshow {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 0; /* מאחורי התוכן והשכבה הכהה */
+}
+
+.hero .slide {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+ opacity: 0; /* מוסתר כברירת מחדל */
+ transition: opacity 1.5s ease-in-out; /* אפקט פייד */
+ 
+ /* אפקט זום עדין ואוטומטי לכל תמונה */
+ animation: zoomEffect 10s infinite; 
+}
+
+.hero .slide.active {
+ opacity: 1; /* הצג את השקופית הפעילה */
+}
+
+/* 3. אנימציית הזום העדין */
+@keyframes zoomEffect {
+ 0% {
+  transform: scale(1);
+ }
+ 50% {
+  transform: scale(1.1);
+ }
+ 100% {
+  transform: scale(1);
+ }
+}
+
+/* 5. עיצוב לכפתור ה-CTA החדש */
+.hero-cta-button {
+ display: inline-block;
+ padding: 16px 32px;
+ background: #d4a373; /* צבע זהוב */
+ color: white;
+ font-size: 20px;
+ font-weight: bold;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ text-decoration: none;
+ margin-top: 20px;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+ font-family: inherit; /* שומר על אחידות גופן */
+}
+
+.hero-cta-button:hover {
+ background: #b35a00; /* צבע כהה יותר */
+ transform: translateY(-3px);
+ box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
