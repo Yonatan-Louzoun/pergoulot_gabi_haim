@@ -583,3 +583,25 @@ header {
  transform: translateY(-3px);
  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
+/* עיצוב משופר לתיאור השירות (הטקסט העיקרי) */
+.service-description {
+    /* 1. שיפור הקריאות */
+    max-width: 720px; /* מגביל את רוחב השורה לשיפור הקריאות */
+    margin: 15px auto 40px auto; /* ממקם במרכז ויוצר רווח מלמעלה/מלמטה */
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333; /* צבע כהה וקריא יותר */
+    
+    /* 2. הבלטה ויזואלית עדינה */
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #f0f0f0; /* רקע בהיר עדין להבלטת הקטע */
+    border-radius: 8px; /* פינות מעוגלות */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* צל עדין */
+}
+
+/* עיצוב המילים המודגשות */
+.service-description strong {
+    color: #b35a00; /* מדגיש את מילות המפתח בצבע העיקרי שלכם */
+    font-weight: bold;
+}
